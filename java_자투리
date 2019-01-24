@@ -1,0 +1,115 @@
+	//플레이어와 몬스터의 체력 설정
+	//미완성+클래스 설정 배우고 나서 다시 사용할 수 있음
+	int enemy1 = 100;
+	int enemy1_offense = 10;
+	int enemy_defense = 10;
+	
+	
+	int player = 300;
+	int player_offense = 30;
+	int player_defense = 30;
+	
+	//플레이어의 직업(1-전사, 2-마법사, 3-성직자.. 등)
+	int player_class =1;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	//시험을 통해 플레이어의 직업 클래스 변경
+	
+	//시험을 볼 지 안 볼 지 플레이어가 선택함(1-예, 2-아니오)
+	System.out.println("시험을 보시겠습니까?");
+	Scanner player_choice2 = new Scanner(System.in);
+	int input_player_choice2 = player_choice2.nextInt();
+	
+	//시험을 시작합니다.
+	if (input_player_choice2 ==1) {
+		System.out.println("시험을 시작합니다.");
+		
+		//시험을 성공적으로 마치는 경우 : 시험 상대방의 체력이 0이 될 경우로 설정하고 함.
+		for(int tester = 100; tester ==0; tester = tester) {
+			
+			//플레이어의 턴
+			//플레이어가 어떻게 행동할 지 선택함(1-공격 2-방어 3-아이템 사용 4- 도망)
+			System.out.println("플레이어의 턴입니다.");
+			Scanner player_choice3 = new Scanner(System.in);
+			int input_player_choice3 = player_choice3.nextInt();
+			
+			if(input_player_choice3==1) {
+				System.out.println("공격합니다.");
+			}
+			else if(input_player_choice3==2) {
+				System.out.println("방어합니다.");
+			}
+			else if(input_player_choice3==3) {
+				System.out.println("아이템을 사용합니다.");
+			}
+			else {
+				System.out.println("시험을 포기합니다.");
+			}
+			
+			
+		}
+	}
+	//시험을 종료합니다.
+	else {
+		System.out.println("시험을 보지 않습니다.");
+	}
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	//플레이어가 맵의 특정 위치에 있을 때 나타나는 이벤트(몬스터와 만날 때)
+	//미완성_몬스터가 랜덤 위치에 등장하게 하고 싶음.
+	
+	
+	//플레이어가 맵의 특정 위치에 있음
+	int location = 1;
+	
+	
+	//플레이어가 몬스터가 위치한 공간에 있을 경우
+	if (location == 4) {
+		System.out.println("몬스터와 마주쳤습니다.");
+		
+		
+		//플레이어가 싸울 지 싸우지 않을 지 입력(1-전투, 2-도망)
+		System.out.println("싸우시겠습니까?");
+		Scanner player_choice = new Scanner(System.in);
+		int input_player_choice = player_choice.nextInt();
+	
+		
+		//플레이어가 전투를 선택했을 경우
+			if(input_player_choice == 1) {
+				System.out.println("전투를 시작합니다.");
+				
+				//for문 : 플레이어의 체력이나 몬스터의 체력이 0이 될 때까지, 혹은 도망을 선택할 때까지 전투는 멈추지 않음.
+			}
+			
+		//플레이어가 도망을 선택했을 경우
+			else {
+				System.out.println("도망쳤습니다.");
+			}
+	}
+	
+	//플레이어가 절경에 위치한 공간에 있을 경우
+	else if(location == 5) {
+		System.out.println("**에 도착했습니다.");
+		
+	}
